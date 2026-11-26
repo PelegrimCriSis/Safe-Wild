@@ -1,0 +1,12 @@
+[
+  { "id": "cbee-urubu", "name": "CBEE (Centro Brasileiro de Estudos em Ecologia de Estradas, UFLA) e Sistema Urubu", "type": "atropelamentos", "url": "http://cbee.ufla.br",
+    "usedFor": "Registros documentados de atropelamento de fauna silvestre, caso o acesso aos dados seja autorizado.", "status": "prevista", "note": "Acesso aos dados ainda não confirmado.", "accessedAt": null },
+  { "id": "icmbio", "name": "ICMBio (Instituto Chico Mendes de Conservação da Biodiversidade)", "type": "conservacao", "url": "https://www.gov.br/icmbio",
+    "usedFor": "Categorias de ameaça das espécies no âmbito nacional.", "status": "prevista", "accessedAt": null },
+  { "id": "iucn", "name": "Lista Vermelha da IUCN", "type": "conservacao", "url": "https://www.iucnredlist.org",
+    "usedFor": "Categorias internacionais de conservação das espécies.", "status": "prevista", "accessedAt": null },
+  { "id": "gbif", "name": "GBIF (Global Biodiversity Information Facility)", "type": "biodiversidade", "url": "https://www.gbif.org",
+    "usedFor": "Identificação e contexto da fauna regional. Não documenta atropelamentos.", "status": "prevista", "accessedAt": null },
+  { "id": "inaturalist", "name": "iNaturalist", "type": "biodiversidade", "url": "https://www.inaturalist.org",
+    "usedFor": "Observações de espécies e fotografias com licença aberta. Não documenta atropelamentos.", "status": "prevista", "accessedAt": null }
+]

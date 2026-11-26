@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeWild · Atropelamentos da fauna silvestre em Mato Grosso do Sul</title>
+<meta name="description" content="Visualização de dados e divulgação científica sobre a mortalidade da fauna silvestre por atropelamentos em Mato Grosso do Sul.">
+<meta name="theme-color" content="#102C24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){var d=document.documentElement;if(!d.dataset.ready){d.classList.remove('js');var b=document.getElementById('boot-error');if(b)b.hidden=false}},2500)</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<p class="boot-error" id="boot-error" hidden role="alert">Os scripts não carregaram. Abra o site por um servidor local (veja o README) ou pelo GitHub Pages.</p>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+</svg>
+
+<header class="site-header" id="header">
+  <div class="container container--wide site-header__inner">
+    <a class="logo" href="#inicio" aria-label="SafeWild, início">Safe<span>Wild</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg class="i-menu" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+    <nav class="site-nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#problema">O problema</a></li>
+        <li><a href="#panorama">Panorama</a></li>
+        <li><a href="#dados">Gráficos</a></li>
+        <li><a href="#especies">Espécies</a></li>
+        <li><a href="#conscientizacao">Na estrada</a></li>
+        <li><a href="#metodologia">Metodologia</a></li>
+        <li><a href="#fontes">Fontes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <defs><path id="c" d="M900 120c120-40 260 10 320 120s20 230-60 310-60 190-190 240-290 20-370-70-30-210-110-310 60-250 190-290 130-30 220 0z"/></defs>
+        <g class="contour" transform="translate(110 20)">
+          <use href="#c"/>
+          <use href="#c" transform="translate(135 80) scale(.85)"/>
+          <use href="#c" transform="translate(270 160) scale(.7)"/>
+          <use href="#c" transform="translate(400 240) scale(.55)"/>
+          <use href="#c" transform="translate(520 320) scale(.4)"/>
+          <use href="#c" transform="translate(-130 -50) scale(1.15)"/>
+          <use href="#c" transform="translate(-270 -110) scale(1.3)"/>
+        </g>
+        <path class="road-edge" d="M-40 820C260 760 420 640 700 660s520 120 820-60"/>
+        <path class="road" d="M-40 820C260 760 420 640 700 660s520 120 820-60"/>
+        <path class="road-line" d="M-40 820C260 760 420 640 700 660s520 120 820-60"/>
+      </svg>
+    </div>
+    <div class="container container--wide">
+      <div class="grid hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow hero-in">Mato Grosso do Sul · foco em Nova Andradina</p>
+          <h1 id="hero-title" class="hero-in">A estrada cruza o território de quem vive nele.<br><span class="soft">Vamos olhar os registros.</span></h1>
+          <p class="lede hero-in">O SafeWild organiza registros documentados de atropelamentos da fauna silvestre e os apresenta em gráficos, informações sobre as espécies e conteúdo de conscientização, à medida que a base é compilada.</p>
+          <div class="hero-in hero__actions">
+            <a class="btn btn--primary" href="#panorama">Explorar os dados <svg aria-hidden="true"><use href="#i-down"/></svg></a>
+            <a class="btn btn--ghost" href="#metodologia">Como os dados são tratados</a>
+          </div>
+        </div>
+        <!-- Foto do hero: remova o atributo hidden quando houver imagem licenciada (autor, licença e fonte). -->
+        <figure class="hero__photo hero-in" hidden>
+          <div class="photo-slot" role="img" aria-label="Espaço reservado para fotografia de fauna silvestre em rodovia">
+            <p>Espaço para fotografia de fauna silvestre e estrada, a ser inserida com licença e crédito.</p>
+          </div>
+          <figcaption>Fotografia: a definir (autor, licença e fonte)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand" id="problema" aria-labelledby="problema-t">
+    <div class="container">
+      <div class="grid problem">
+        <div class="problem__lead reveal">
+          <div class="section-head">
+            <p class="eyebrow">O problema</p>
+            <h2 id="problema-t">Estradas também são barreiras ecológicas</h2>
+            <p>Rodovias dividem ambientes naturais e podem obrigar animais silvestres a atravessar o asfalto para buscar alimento, abrigo e parceiros. Este projeto parte dos registros documentados para entender o que eles mostram e o que não mostram.</p>
+          </div>
+        </div>
+        <ul class="problem__items">
+          <li class="reveal"><h3>Fragmentação de habitats</h3><p>Quando uma estrada separa áreas de vegetação, as populações de fauna ficam divididas e os deslocamentos naturais passam a exigir travessias.</p></li>
+          <li class="reveal"><h3>Risco para animais silvestres</h3><p>A travessia de vias expõe os animais ao tráfego de veículos, principalmente em trechos próximos a ambientes naturais.</p></li>
+          <li class="reveal"><h3>Impactos na biodiversidade</h3><p>Os atropelamentos podem afetar a conservação das espécies, em especial daquelas com status de ameaça. Cada espécie será contextualizada com fontes de conservação.</p></li>
+          <li class="reveal"><h3>O que os registros permitem afirmar</h3><p>Uma espécie com mais registros não é, necessariamente, a que mais morre. Os resultados serão sempre apresentados como a quantidade de atropelamentos registrados na base e no recorte analisados.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="panorama" aria-labelledby="panorama-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Panorama dos dados</p>
+        <h2 id="panorama-t">O conjunto de registros em números</h2>
+        <p>Estes indicadores serão calculados automaticamente a partir da base documentada.</p>
+        <div><button class="btn btn--ghost" type="button" data-open-import>Importar dados (API ou JSON)</button></div>
+      </div>
+      <div class="kpis reveal">
+        <div class="kpi" data-kpi="records"><div class="kpi__value">—</div><div class="kpi__label">Registros documentados</div><div class="kpi__note">aguardando dados</div></div>
+        <div class="kpi" data-kpi="species"><div class="kpi__value">—</div><div class="kpi__label">Espécies com registro</div><div class="kpi__note">aguardando dados</div></div>
+        <div class="kpi" data-kpi="municipalities"><div class="kpi__value">—</div><div class="kpi__label">Municípios na base</div><div class="kpi__note">aguardando dados</div></div>
+        <div class="kpi" data-kpi="period"><div class="kpi__value">—</div><div class="kpi__label">Período coberto</div><div class="kpi__note">aguardando dados</div></div>
+      </div>
+      <div class="empty reveal" id="panorama-status" aria-live="polite"><strong>Os registros ainda estão sendo reunidos</strong><span>Nenhum número é exibido até que existam dados documentados com fonte.</span></div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="dados" aria-labelledby="dados-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Visualização de dados</p>
+        <h2 id="dados-t">Registros por espécie, município e período</h2>
+        <p>Cada gráfico mostrará o tamanho da amostra, a fonte e a data de atualização.</p>
+      </div>
+      <div class="viz" id="viz-base" hidden></div>
+      <div class="ph-grid ph-grid--2" id="base-figs">
+        <figure class="figure reveal" data-chart="species" data-fig="1" data-title="Registros por espécie"><div class="figure__body"></div><figcaption></figcaption></figure>
+        <figure class="figure reveal" data-chart="municipality" data-fig="2" data-title="Registros por município"><div class="figure__body"></div><figcaption></figcaption></figure>
+        <figure class="figure reveal" data-chart="period" data-fig="3" data-title="Registros por período"><div class="figure__body"></div><figcaption></figcaption></figure>
+      </div>
+      <div class="bio" id="biodiversidade">
+        <div class="section-head reveal">
+          <p class="eyebrow">Dados de API · GBIF</p>
+          <h3>Ocorrências de fauna em Mato Grosso do Sul</h3>
+          <p class="note">Estes gráficos mostram onde e quando a fauna foi <strong>observada ou coletada</strong> segundo o GBIF. Não são registros de atropelamento e não entram nos indicadores acima.</p>
+        </div>
+        <div class="bio__controls reveal">
+          <input class="search" id="bio-q" type="search" placeholder="Localidade (opcional), ex.: Nova Andradina" aria-label="Localidade para busca textual">
+          <button class="btn btn--primary" type="button" id="bio-go">Buscar no GBIF</button>
+          <button class="chip" type="button" data-bio-q="Nova Andradina">Nova Andradina</button>
+          <button class="chip" type="button" data-bio-q="">Todo o estado</button>
+        </div>
+        <p id="bio-msg" class="imp-msg" role="status"></p>
+        <div class="viz" id="viz-bio" hidden></div>
+        <div class="ph-grid ph-grid--2" id="bio-figs"><figure class="figure reveal" data-chart="bio-species" data-fig="B1" data-title="Ocorrências por espécie (GBIF)"><div class="figure__body"></div><figcaption></figcaption></figure><figure class="figure reveal" data-chart="bio-class" data-fig="B2" data-title="Ocorrências por grupo (GBIF)"><div class="figure__body"></div><figcaption></figcaption></figure><figure class="figure reveal" data-chart="bio-year" data-fig="B3" data-title="Ocorrências por ano (GBIF)"><div class="figure__body"></div><figcaption></figcaption></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand" id="especies" aria-labelledby="especies-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Catálogo de espécies</p>
+        <h2 id="especies-t">A fauna da região, espécie por espécie</h2>
+        <p>Nome popular, nome científico, habitat, importância ecológica e status de conservação, sempre com fonte citada.</p>
+      </div>
+      <div class="catalog reveal">
+        <div class="catalog__tools" id="cat-tools" hidden>
+          <label class="sr-only" for="cat-search">Buscar espécie por nome popular ou científico</label>
+          <input id="cat-search" class="search" type="search" placeholder="Buscar por nome popular ou científico" autocomplete="off">
+          <div class="chips" id="cat-groups" role="group" aria-label="Filtrar por grupo taxonômico"></div>
+          <div class="chips" id="cat-status" role="group" aria-label="Filtrar por status de conservação" hidden></div>
+          <p class="cat-count" id="cat-count" aria-live="polite"></p>
+        </div>
+        <div id="cat-state"></div>
+        <ul class="species-grid" id="cat-grid"></ul>
+      </div>
+      <dialog class="species-dialog" id="cat-dialog" aria-labelledby="dlg-title"></dialog>
+    </div>
+  </section>
+
+  <section class="section section--sage" id="conscientizacao" aria-labelledby="consc-t">
+    <div class="container">
+      <div class="grid problem">
+        <div class="problem__lead reveal">
+          <div class="section-head">
+            <p class="eyebrow">Na estrada</p>
+            <h2 id="consc-t">Conscientização: o que muda na forma de dirigir e de preservar</h2>
+            <p>Orientações gerais de direção segura e de conservação. Não substituem a sinalização local nem a orientação dos órgãos de trânsito e ambientais.</p>
+          </div>
+        </div>
+        <ul class="problem__items">
+          <li class="reveal"><h3>Impactos dos atropelamentos</h3><p>Para os animais, a colisão pode causar ferimentos e morte. Para as populações, a perda repetida de indivíduos pode ser relevante, principalmente em espécies ameaçadas ou pouco abundantes. Para as pessoas, a colisão com animais de maior porte pode causar acidentes e danos. A dimensão desses efeitos em Nova Andradina só poderá ser discutida com base nos registros documentados.</p></li>
+          <li class="reveal"><h3>Recomendações para motoristas</h3>
+            <ul class="tips"><li>Reduza a velocidade perto de vegetação, rios e áreas onde há presença de fauna.</li><li>Redobre a atenção ao amanhecer, ao entardecer e à noite, quando muitas espécies estão ativas.</li><li>Respeite a sinalização de fauna e mantenha distância segura do veículo à frente.</li><li>Não alimente animais silvestres à beira da estrada.</li><li>Se houver colisão, pare em local seguro e avise o responsável pela via ou o órgão ambiental local.</li></ul></li>
+          <li class="reveal"><h3>Corredores ecológicos</h3><p>São faixas de vegetação ou ambientes naturais que mantêm a ligação entre áreas separadas, permitindo o deslocamento da fauna. Quando uma estrada corta essa ligação, o risco de travessia sobre a pista aumenta. Preservar e restaurar esses trechos, e planejar estradas considerando-os, está entre as medidas discutidas na ecologia de estradas. A efetividade depende do local e do projeto.</p></li>
+          <li class="reveal"><h3>Preservação da fauna</h3><p>A conservação passa por manter o habitat nativo, respeitar as áreas protegidas e não retirar animais silvestres da natureza. Divulgar dados confiáveis ajuda a orientar escolhas, e é por isso que este site separa registros documentados de estimativas.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="metodologia" aria-labelledby="metodo-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Metodologia</p>
+        <h2 id="metodo-t">Como os dados serão coletados e organizados</h2>
+        <p class="note">Esta é uma proposta em desenvolvimento. Nenhuma coleta ou análise de registros foi concluída até o momento.</p>
+      </div>
+      <div class="ph-grid ph-grid--3">
+        <div class="ph-block reveal"><h3>Origem dos dados</h3><p>Proposta: usar uma base de registros documentados de atropelamento mantida por instituição de pesquisa, como o Sistema Urubu do CBEE, caso o acesso seja autorizado. Informações sobre as espécies virão de fontes de conservação e biodiversidade, listadas em Fontes.</p></div>
+        <div class="ph-block reveal"><h3>Critérios de inclusão</h3><p>Proposta: entram registros de atropelamento de fauna silvestre com espécie identificada, data (ao menos o ano), município de Mato Grosso do Sul e fonte rastreável. Os critérios finais serão confirmados antes da inclusão dos dados.</p></div>
+        <div class="ph-block reveal"><h3>Organização e tratamento</h3><p>Os dados ficam em arquivos JSON. Ao carregar, o site descarta registros com data inconsistente ou com espécie, município ou fonte inexistentes, e informa o descarte. Totais e gráficos são calculados a partir dos registros, nunca digitados.</p></div>
+        <div class="ph-block reveal"><h3>Nível de confiabilidade</h3><p>Cada registro terá uma classificação (alta, média ou baixa). Os critérios dessa classificação ainda serão definidos e publicados aqui.</p></div>
+        <div class="ph-block reveal"><h3>Registro não é estimativa</h3><p>Só registros documentados entram nos gráficos. Estimativas de mortalidade, se um dia forem apresentadas, ficarão separadas e identificadas, com método e fonte.</p></div>
+        <div class="ph-block reveal"><h3>Biodiversidade não é atropelamento</h3><p>Observações de GBIF e iNaturalist servem para conhecer a fauna da região. Elas só contariam como atropelamento se o próprio registro documentasse o evento.</p></div>
+      </div>
+      <div class="limits reveal"><h3>Limitações do estudo</h3>
+        <ul class="tips"><li>Os registros refletem onde, quando e por quem houve monitoramento ou notificação, e não a mortalidade total.</li><li>Carcaças podem ser removidas ou passar despercebidas, e a identificação da espécie pode ser incerta.</li><li>O recorte geográfico e temporal depende do que a base disponibiliza.</li><li>A maior quantidade de registros de uma espécie não prova que ela seja a mais afetada.</li><li>Os registros não permitem, por si, avaliar o efeito sobre as populações.</li></ul></div>
+      <p class="note reveal" id="base-update" style="margin-top:var(--s7)">Data de atualização da base: ainda não definida.</p>
+    </div>
+  </section>
+
+  <section class="section section--sand" id="fontes" aria-labelledby="fontes-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Fontes</p>
+        <h2 id="fontes-t">De onde vêm os dados e as informações</h2>
+        <p>Cada fonte indica para que serve no projeto e se já foi utilizada. Nenhuma publicação é listada sem conferência.</p>
+      </div>
+      <div id="sources-list"><div class="empty"><span>Carregando fontes…</span></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a class="logo" href="#inicio">Safe<span>Wild</span></a><p style="margin-top:var(--s4)">Visualização de dados e divulgação científica sobre a mortalidade da fauna silvestre por atropelamentos em Mato Grosso do Sul, com foco inicial em Nova Andradina.</p></div>
+      <div><h2>Navegação</h2><ul><li><a href="#problema">O problema</a></li><li><a href="#panorama">Panorama</a></li><li><a href="#dados">Gráficos</a></li><li><a href="#especies">Espécies</a></li><li><a href="#conscientizacao">Na estrada</a></li></ul></div>
+      <div><h2>Transparência</h2><ul><li><a href="#metodologia">Metodologia e limitações</a></li><li><a href="#fontes">Fontes</a></li><li><a href="#panorama" data-open-import>Importar dados</a></li></ul></div>
+      <div><h2>Projeto</h2><ul><li>Projeto Integrador 3</li></ul><ul id="footer-credits" hidden></ul></div>
+    </div>
+    <p class="footer-bottom">SafeWild · conteúdo informativo, sem valor normativo · fotografias exibidas com crédito e licença · nenhum dado é exibido sem fonte documentada</p>
+  </div>
+</footer>
+
+<div class="import-banner" id="import-banner" hidden role="status"><span id="import-banner-text"></span><button class="btn btn--ghost" type="button" id="import-download">Baixar JSON</button><button class="btn btn--ghost" type="button" id="import-clear">Remover</button></div>
+<dialog class="import-dialog" id="import-dialog" aria-labelledby="imp-title">
+  <div class="import-dialog__inner">
+    <button class="species-dialog__close" type="button" data-imp-close aria-label="Fechar">×</button>
+    <h3 id="imp-title">Importar dados</h3>
+    <p class="note">Os dados são aplicados somente neste navegador e aparecem identificados como importados. Nada é enviado a servidores do SafeWild.</p>
+    <div class="imp-grid">
+      <label>Tipo de dado<select id="imp-mode"><option value="records">Registros de atropelamento</option><option value="species">Espécies (catálogo)</option><option value="full">Formato SafeWild (species, records, municipalities, sources)</option></select></label>
+      <label>Nome da fonte<input id="imp-source" type="text" placeholder="Ex.: nome da base ou instituição"></label>
+    </div>
+    <label>URL da API (GET, retorna JSON)<span class="imp-row"><input id="imp-url" type="url" placeholder="https://..."><button class="btn btn--ghost" type="button" id="imp-fetch">Buscar</button></span></label>
+    <label>Ou arquivo (.json, .csv ou .zip)<input id="imp-file" type="file" accept=".json,.geojson,.csv,.zip,application/json,text/csv,application/zip"></label>
+    <label id="imp-zip-row" hidden>Arquivo dentro do ZIP<select id="imp-zip"></select></label>
+    <label>Ou cole JSON ou CSV<textarea id="imp-text" rows="4"></textarea></label>
+    <button class="btn btn--ghost" type="button" id="imp-read">Ler texto colado</button>
+    <div id="imp-map"></div><p id="imp-prev" class="cat-count"></p><div id="imp-sample"></div><ul id="imp-todo" class="tips"></ul>
+    <label>Confiabilidade atribuída<select id="imp-conf"><option value="alta">alta</option><option value="media" selected>média</option><option value="baixa">baixa</option></select></label>
+    <label class="imp-check" id="imp-confirm-row"><input id="imp-confirm" type="checkbox"> Confirmo que cada linha documenta um atropelamento de fauna (e não apenas a ocorrência da espécie).</label>
+    <label class="imp-check"><input id="imp-keep" type="checkbox"> Manter neste navegador (localStorage)</label>
+    <p id="imp-msg" class="imp-msg" role="status"></p>
+    <div class="hero__actions"><button class="btn btn--primary" type="button" id="imp-apply" disabled>Aplicar no site</button><button class="btn btn--ghost" type="button" data-imp-close>Cancelar</button></div>
+  </div>
+</dialog>
+<button class="to-top" type="button" aria-label="Voltar ao topo"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+<script src="assets/vendor/chart.umd.js" defer></script>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

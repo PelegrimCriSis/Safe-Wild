@@ -1,0 +1,18 @@
+/* SafeWild · tokens de design (Etapa 01) */
+:root{
+  --forest-950:#102C24; --forest-900:#173D32; --moss-700:#315A46; --sage-500:#68856A;
+  --sage-200:#D5E2CB; --sand-100:#F3F1E8; --paper-50:#FAFAF7; --ink-600:#5A625B;
+  --ochre-600:#B9803A; --ochre-700:#7A4F17; --ochre-300:#D9A765; --line:rgba(23,61,50,.16); --line-dark:rgba(213,226,203,.22);
+  --font-display:"Fraunces",Georgia,serif; --font-body:"Inter",system-ui,sans-serif; --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --fs-display:clamp(2.5rem,1.4rem + 4.2vw,4.25rem); --fs-h2:clamp(2rem,1.3rem + 2.6vw,3.25rem);
+  --fs-h3:clamp(1.375rem,1.2rem + .7vw,1.75rem); --fs-lede:clamp(1.125rem,1.05rem + .35vw,1.375rem);
+  --fs-body:1rem; --fs-small:.875rem; --fs-label:.75rem;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px; --s10:144px;
+  --section-y:clamp(96px,60px + 9vw,144px);
+  --r-sm:2px; --r-md:6px; --shadow:0 1px 2px rgba(16,44,36,.08);
+  --container:1200px; --container-wide:1360px; --container-text:720px;
+  --pad-x:20px; --gap:16px; --header-h:64px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (min-width:640px){:root{--pad-x:32px}}
+@media (min-width:960px){:root{--pad-x:48px;--gap:24px;--header-h:72px;--fs-body:1.0625rem}}
